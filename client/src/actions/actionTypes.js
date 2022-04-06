@@ -1,0 +1,6 @@
+export const ActionTypes = {
+    ADD_NEW_BOOK:'ADD_NEW_BOOK',
+    GET_ALL_BOOKS:' GET_ALL_BOOKS',
+    DELETE_BOOK:'DELETE_BOOK',
+    EDIT_BOOK:'EDIT_BOOK'
+}
