@@ -1,6 +1,6 @@
 import { ActionTypes } from "./actionTypes"
 
-export const addBooks = (book) => {
+export const addBook = (book) => {
     return{
         type:ActionTypes.ADD_NEW_BOOK,
         payload: book

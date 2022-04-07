@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import {createBook} from "../../API/books";
-
+import {useDispatch} from 'react-redux'
+//my functions
+import {addBook} from '../../actions/bookActions'
 //material UI components
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -39,6 +41,7 @@ export const HeaderForm = () => {
 }
 
 export const NewBookForm = () => {
+    const dispatch = useDispatch()
     const [formData, setFormData] =  useState({
         title:'', 
         author:'', 
@@ -50,6 +53,7 @@ export const NewBookForm = () => {
         e.preventDefault()
         console.log(formData)
         createBook(formData).then(response => console.log(response.data))
+        dispatch(addBook(formData))
     }
 
     const handleInputValueChange = (event) => {
